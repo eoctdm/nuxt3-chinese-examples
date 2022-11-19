@@ -1,0 +1,48 @@
+{
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "server": "node ./.output/server/index.mjs"
+  },
+  "devDependencies": {
+    "@nuxt/content": "^2.2.2",
+    "@nuxtjs/color-mode": "^3.1.8",
+    "nuxt": "3.0.0",
+    "sass": "^1.56.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "ant-design-vue": "^3.2.15",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.10.2"
+  },
+  "name": "nuxt3-chinese-examples",
+  "version": "3.0.0",
+  "title": "手把手教您使用Nuxt3框架(Nuxt3中文参考手册)配套示例源码",
+  "description": "手把手教您使用Nuxt3框架(Nuxt3中文参考手册)适合Nuxt3初学者学习和实践，资深者快速参考，爱好者持续跟踪新功能和最佳实践。",
+  "keywords": [
+    "nuxt3",
+    "vue3",
+    "ssr",
+    "csr",
+    "pm2",
+    "antd",
+    "bootstrap",
+    "frontend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eoctdm/nuxt3-chinese-examples.git"
+  },
+  "homepage": "https://www.dvtop.cn/nuxt/examples/3.0.0/",
+  "peerDependencies": {
+    "nuxt": ">=3.0.0"
+  },
+  "engines": {
+    "node": ">=16.11.0"
+  },
+  "license": "MIT"
+}
