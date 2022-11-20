@@ -18,7 +18,7 @@ export default [
   {chapter:"3.3.3",title:"工具常用设置",page:12},
   {chapter:"3.4",title:"创建Nuxt3项目",page:12},
   {chapter:"3.5",title:"示例代码下载",page:14},
-  {chapter:"4",title:"开发手册",page:15},
+  {chapter:"4",title:"开发教程",page:15},
   {chapter:"4.1",title:"目录和文件",page:15},
   {chapter:"4.2",title:"页面（pages）",page:16},
   {chapter:"4.3",title:"页面组件（components）",page:17},

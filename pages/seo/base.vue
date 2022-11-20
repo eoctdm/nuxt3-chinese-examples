@@ -20,8 +20,8 @@
   };
   useHead({
     //title: head.title,
-    titleTemplate: head.title+' - %s',
-    //titleTemplate: (appTitle) => `${head.title} - ${appTitle}`,
+    titleTemplate: head.title+'-%s',
+    //titleTemplate: (appTitle) => `${head.title}-${appTitle}`,
     meta: [
       { name: 'keywords', content: head.keywords },
       { name: 'description', content: head.description },

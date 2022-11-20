@@ -15,15 +15,15 @@
 <script setup>
   //title在此页面路由的组件或布局中通过route.meta.t1方式获取对应值。
   const head = {
-    title: 'SEO路由元数据',
+    title: 'SEO配置之路由元数据使用',
     keywords: '索引擎优化,SEO,路由元数据',
-    description: '路由元数据为当前路由下组件或布局使用。'
+    description: 'SEO配置之路由元数据为当前路由下组件或布局使用。'
   };
   definePageMeta({
     head: {
-      title: 'SEO路由元数据',
+      title: 'SEO配置之路由元数据使用',
       keywords: '索引擎优化,SEO,路由元数据',
-      description: '路由元数据为当前路由下组件或布局使用。'
+      description: 'SEO配置之路由元数据为当前路由下组件或布局使用。'
     }
   });
 </script>

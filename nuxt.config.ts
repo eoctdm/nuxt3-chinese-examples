@@ -1,10 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+import headConfig from "./assets/data/head.js"
 const baseURL = "/"; // /nuxt/examples/3.0.0/ #结尾必须加/
-const heads = {
-  title: "Nuxt3中文参考手册配套示例源码",
-  keywords: 'Nuxt3,Vue3,中文参考手册,示例源码,混合渲染,服务端渲染,客户端渲染',
-  description: '手把手教您使用Nuxt3框架（Nuxt3中文参考手册），适合Nuxt3初学者学习和实践，资深者快速参考，爱好者持续跟踪新功能和最佳实践。'
-};
 export default defineNuxtConfig({
   routeRules: {
     // '/**': { ssr: false }, //将所有路由ssr关闭，即整个网站为客户端渲染
@@ -32,19 +28,19 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-16',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
-      title: heads.title,
+      title: headConfig.data.title,
       htmlAttrs: {
         lang: 'zh'
       },
       meta: [
         { name: 'content-type', content: 'text/html;charset=utf-8' },
-        { name: 'keywords', content:  heads.keywords},
-        { name: 'description', content:  heads.description},
+        { name: 'keywords', content:  headConfig.data.keywords},
+        { name: 'description', content:  headConfig.data.description},
         { ['http-equiv']: 'x-ua-compatible', content: 'ie=edge,chrome=1' },
         { name: 'baidu-site-verification', content: '' },
-        { property: 'og:title', content: heads.title },
-        { property: 'og:keywords', content: heads.keywords },
-        { property: 'og:description', content: heads.description },
+        { property: 'og:title', content: headConfig.data.title },
+        { property: 'og:keywords', content: headConfig.data.keywords },
+        { property: 'og:description', content: headConfig.data.description },
       ],
       link: [
         { rel: 'shortcut icon', href: baseURL+'favicon.ico', type: 'image/x-icon'},
@@ -54,6 +50,8 @@ export default defineNuxtConfig({
         */
       ],
       script: [
+        //放在script最前，为异步加载。
+        { src: 'https://hm.baidu.com/hm.js?f6f1fef5f3a52df081128b261a04438c' },
         /* 客户端引用bootstrap方式，不推荐；在script和link中，使用body: true配置将其添加到body里最后元素
         { body: true, src: 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js', integrity: 'sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3', crossorigin: 'anonymous' },
         { body: true, src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js', integrity: 'sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk', crossorigin: 'anonymous' },

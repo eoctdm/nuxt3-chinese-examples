@@ -14,6 +14,12 @@
         <span v-html="item.text"></span>
       </NuxtLink>
     </div>
+    <div v-if="false">
+      <div>https://www.dvtop.cn/nuxt/examples/3.0.0/index.html</div>
+      <div v-for="(item,index) in links" :key="index">
+        https://www.dvtop.cn/nuxt/examples/3.0.0{{item.url.replaceAll('${baseURL}',baseURL)}}
+      </div>
+    </div>
   </div>
 </template>
 <script setup>
