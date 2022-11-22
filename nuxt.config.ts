@@ -50,7 +50,7 @@ export default defineNuxtConfig({
         */
       ],
       script: [
-        //放在script最前，为异步加载。
+        //放在script最前，为异步加载；?号后更换为您申请的KEY。
         { src: 'https://hm.baidu.com/hm.js?f6f1fef5f3a52df081128b261a04438c' },
         /* 客户端引用bootstrap方式，不推荐；在script和link中，使用body: true配置将其添加到body里最后元素
         { body: true, src: 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js', integrity: 'sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3', crossorigin: 'anonymous' },

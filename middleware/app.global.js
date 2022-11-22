@@ -10,7 +10,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
   }
   //统一设置页面meta内容
   const pageLink = pageLinks.find(item=>item.url.indexOf(toPath)==0);
-  if( pageLink && pageLink.text){
+  if( toPath && toPath!="/" && toPath!="/index.html" && pageLink && pageLink.text){
     let text = pageLink.text;
     const idx = text.indexOf(" ");
     if( idx>=0) text = text.substring(idx+1);

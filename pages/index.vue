@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h5 class="app-text-center">手把手教您使用Nuxt3框架(Nuxt3中文参考手册)</h5>
+    <h5 class="app-text-center">手把手教您使用Nuxt3框架(Nuxt3中文开发教程)</h5>
     <h6 class="app-text-center">配套源代码运行效果，助您开启Nuxt3之旅！</h6>
     <div class="app-text-right">------基于2022年11月16日发布的Nuxt v3.0.0稳定版</div>
     <div class="app-text-center">

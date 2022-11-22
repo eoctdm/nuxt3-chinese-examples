@@ -1,7 +1,12 @@
 export default [
   {
+    url: "https://www.dvtop.cn/",
+    text: "&lt;&lt; 网站首页",
+    external: true
+  },
+  {
     url: "/more/source-code",
-    text: "&gt;&gt; 教程文档(83页)和示例源代码下载"
+    text: "&gt;&gt; 教程文档和示例源代码下载"
   },
   {
     url: "/component/rule",
