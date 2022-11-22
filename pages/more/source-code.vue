@@ -2,7 +2,7 @@
   <div>
     <BaseFooLink></BaseFooLink>
     <h5 class="app-text-center">手把手教您使用Nuxt3框架(Nuxt3中文开发教程)</h5>
-    <h6 class="app-text-center">教程文档(83页)和示例源代码下载</h6>
+    <h6 class="app-text-center">教程文档和示例源代码下载</h6>
     <div class="app-text-center">
       <img style="width: 120px;height: 120px;" :src="baseURL+'resource/img/qrcode.jpg'">
     </div>
@@ -16,7 +16,7 @@
         </NuxtLink>
       </div>
     </div>
-    <h6 class="app-margin-top-s">2. 中文教程全文目录（83页）</h6>
+    <h6 class="app-margin-top-s">2. 中文教程全文目录</h6>
     <div class="app-box">
       <div v-for="(item,index) in manual" :key="index" class="line app-flex"
           :class="{'app-text-weight':index==0}">
