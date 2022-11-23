@@ -1,10 +1,9 @@
 <template>
   <div>
     <BaseFooLink :box="true">
-      点我回到首页
+      点我回到目录
       <template #extend>组件的第二个插槽内容</template>
     </BaseFooLink>
-    <h6>约定引用组件的示例。</h6>
     <LazyTheFooter v-if="show" :pdate="20221220"></LazyTheFooter>
     <div v-else>组件懒加载中...</div>
   </div>

@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>SEO配置之路由元数据使用的示例。</h6>
     <div>请查看此网页源代码检查head中对应内容是否设置正确。</div>
     <div>当前页面路由：{{$route.fullPath}}</div>
     <div>

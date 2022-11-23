@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>异常处理的示例。</h6>
     <div>打开浏览器开发者工具中的控制台，查看以下操作日志。</div>
     <div @click="throw1" class="app-color-blue app-cursor">
       在客户端抛出自定义异常（控制台里显示）

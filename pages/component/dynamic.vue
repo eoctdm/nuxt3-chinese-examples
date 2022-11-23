@@ -1,6 +1,5 @@
 <template>
   <div><BaseFooLink></BaseFooLink>
-    <h6>动态引用组件的示例。</h6>
     <div>
       <span>组件选择：</span>
       <span @click="isLink=true;"

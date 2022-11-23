@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>页面路由验证器的示例。</h6>
     <div>当前页面路由：{{$route.fullPath}}</div>
     <div>
       <ClientOnly>

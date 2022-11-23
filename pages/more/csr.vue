@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>混合渲染之指定客户端渲染的示例。</h6>
     <div @click="tap" class="app-color-blue app-cursor">
       获取数据（客户端访问数据后渲染）
     </div>

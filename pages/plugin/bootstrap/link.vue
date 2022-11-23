@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>使用Bootstrap插件之浏览器引用方式的示例。</h6>
     <ClientOnly>
       <div v-if="message">{{message}}</div>
     </ClientOnly>

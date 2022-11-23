@@ -11,20 +11,20 @@ export default defineNuxtRouteMiddleware((to, from) => {
   //统一设置页面meta内容
   const pageLink = pageLinks.find(item=>item.url.indexOf(toPath)==0);
   if( toPath && toPath!="/" && toPath!="/index.html" && pageLink && pageLink.text){
-    let text = pageLink.text;
-    const idx = text.indexOf(" ");
-    if( idx>=0) text = text.substring(idx+1);
-    if( text){
+    const pageTKD = {
+      title: `${pageLink.title}-${headConfig.data.appname}`,
+      keywords: pageLink.keywords,
+      description: pageLink.description
+    };
+    if( pageLink.title){
       const heads = {
-        title: `${text}-${headConfig.data.title}`,
+        title: pageTKD.title,
         meta: []
       };
-      heads.meta.push( ...headConfig.buildMeta({
-        title: text,
-        keywords: text+","+headConfig.data.keywords,
-        description: text+"-"+headConfig.data.description
-      }));
+      heads.meta.push( ...headConfig.buildMeta(pageTKD));
       useHead(heads);
+      const tkdData = usePageTKD();
+      tkdData.value = pageTKD;
     }
   }
 })

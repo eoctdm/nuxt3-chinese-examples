@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>模块化代码的示例。</h6>
     <div>当前颜色useColor: {{color}}</div>
     <div>用户信息useUser: name={{user.name}},age={{user.age}}</div>
     <div class="app-cursor" @click="times++">

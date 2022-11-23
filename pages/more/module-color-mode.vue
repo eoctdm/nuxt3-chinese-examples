@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>Nuxt3模块（color-mode示例）的示例。</h6>
     <ClientOnly fallback-tag="div" fallback="获取主题中">
       <div>当前主题：{{ $colorMode.value }}</div>
     </ClientOnly>
@@ -39,7 +38,7 @@ body, select, h6 {
 .dark-mode select {
   @include dark;
 }
-.dark-mode h5 {
+.dark-mode h1 {
   @include dark;
 }
 .dark-mode h6 {
@@ -55,7 +54,7 @@ body, select, h6 {
 .sepia-mode select {
   @include sepia;
 }
-.sepia-mode h5 {
+.sepia-mode h1 {
   @include sepia;
 }
 .sepia-mode h6 {

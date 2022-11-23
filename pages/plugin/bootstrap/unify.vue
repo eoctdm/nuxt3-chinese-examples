@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>使用Bootstrap插件之浏览器引用方式的示例。</h6>
     <div>
       <button type="button" class="btn btn-primary"
         data-bs-toggle="tooltip" data-bs-title="按钮提示内容">提示</button>

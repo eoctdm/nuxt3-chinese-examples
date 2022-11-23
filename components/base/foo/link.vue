@@ -1,11 +1,20 @@
 <template>
-  <div :class="{'app-box':box}">
-    <div><slot name="extend"></slot></div>
-    <div><NuxtLink to="/"><slot>&lt;&lt; 回到首页</slot></NuxtLink></div>
+  <div>
+    <div :class="{'app-box':box}">
+      <slot name="extend"></slot>
+      <div><NuxtLink to="/"><slot>&lt;&lt; 回到目录</slot></NuxtLink></div>
+    </div>
+    <h1 v-if="tkd">{{tkdData.title}}</h1>
+    <div v-if="tkd" class="app-color-grey">{{tkdData.description}}</div>
   </div>
 </template>
 <script setup>
-  const { box } = defineProps({
-    box: Boolean
+  const tkdData = usePageTKD();
+  const { box,tkd } = defineProps({
+    box: Boolean,
+    tkd: {
+      type: Boolean,
+      default: true
+    },
   });
 </script>

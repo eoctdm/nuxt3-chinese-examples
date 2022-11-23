@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>自主开发插件的使用示例。</h6>
     <div>使用插件显示内容：{{ $currentYear('enjoying') }}</div>
     <ClientOnly>
       <Teleport to="body">

@@ -1,7 +1,9 @@
+const appname = "Nuxt3中文开发教程";
 const data = {
-  title: "手把手教您使用Nuxt3框架-Nuxt3中文开发教程",
-  keywords: 'Nuxt3,Vue3,中文开发教程,示例源码,混合渲染,服务端渲染,客户端渲染',
-  description: '手把手教您使用Nuxt3框架-Nuxt3中文开发教程，适合Nuxt3初学者学习和实践，资深者快速参考，爱好者持续跟踪新功能和最佳实践。'
+  appname,
+  title: "在线示例目录-"+appname,
+  keywords: '在线示例目录,Nuxt3',
+  description: '开发示例共有35类，包括组件、路由、中间件、导航、页面过渡动画、插件、服务端处理、数据获取、渲染、模块等在线示例效果。'
 };
 const buildMeta = ( params)=>{
   const metaArray = [];

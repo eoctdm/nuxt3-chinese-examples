@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>useFetch和useLazyFetch（数据获取）的示例。</h6>
     <div>日期列表api网址：{{menuUrl}}</div>
     <div>详细数据api网址：{{resultUrl || '请点击日期'}}</div>
     <div v-if="menuData">

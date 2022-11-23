@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>使用AntD插件的示例。</h6>
     <div>antd图标：<StarOutlined/><StarFilled/><StarTwoTone/></div>
     <div>antd按钮：<a-button @click="msg" type="primary">消息</a-button></div>
     <div>

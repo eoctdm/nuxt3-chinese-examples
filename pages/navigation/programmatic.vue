@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>编程式导航的示例。</h6>
     <div @click="inside" class="app-color-blue app-cursor">访问“通配路由”</div>
     <div @click="outside" class="app-color-blue app-cursor">访问网易</div>
   </div>

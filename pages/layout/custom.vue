@@ -7,13 +7,16 @@
     </div>
     <NuxtLayout :name="layoutName">
       <div class="app-box">
-        <h6>页面内自定义布局和动态更改布局。</h6>
-        <BaseFooLink></BaseFooLink>
+        <h1>{{tkdData.title}}</h1>
+        <div class="app-color-grey">{{tkdData.description}}</div>
+        <div></div>
+        <BaseFooLink :tkd="false"></BaseFooLink>
       </div>
     </NuxtLayout>
   </div>
 </template>
 <script setup>
+  const tkdData = usePageTKD();
   definePageMeta({
     layout: false, //页面初始化时禁用默认布局
     //layout: "custom-first", //页面初始化时自定义更改布局

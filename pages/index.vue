@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h5 class="app-text-center">手把手教您使用Nuxt3框架(Nuxt3中文开发教程)</h5>
+    <h1 class="app-text-center">手把手教您使用Nuxt3框架(Nuxt3中文开发教程)</h1>
     <h6 class="app-text-center">配套源代码运行效果，助您开启Nuxt3之旅！</h6>
     <div class="app-text-right">------基于2022年11月16日发布的Nuxt v3.0.0稳定版</div>
     <div class="app-text-center">
-      <input v-model="searchKey" style="width: 16em;" placeholder="输入关键字搜索">
+      在线示例目录搜索：<input v-model="searchKey" style="width: 16em;" placeholder="输入关键字">
       <span class="app-margin-left">共{{links.length}}项</span>
       <span v-if="searchKey" class="app-margin-left app-color-blue app-cursor" @click="searchKey=''">清除内容</span>
     </div>
@@ -13,9 +13,10 @@
           :external="item.external?true:false">
         <span v-html="item.text"></span>
       </NuxtLink>
+      <span class="app-margin-left-s app-color-grey">{{item.description}}</span>
     </div>
     <div v-if="false">
-      <div>https://www.dvtop.cn/nuxt/examples/3.0.0/index.html</div>
+      <div>https://www.dvtop.cn/nuxt/examples/3.0.0/</div>
       <div v-for="(item,index) in links" :key="index">
         https://www.dvtop.cn/nuxt/examples/3.0.0{{item.url.replaceAll('${baseURL}',baseURL)}}
       </div>

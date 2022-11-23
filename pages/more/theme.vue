@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>全局sass变量和动态样式的示例。</h6>
     <div class="text">使用全局变量的样式效果</div>
     <div>
       <span @click="tap(-2)"

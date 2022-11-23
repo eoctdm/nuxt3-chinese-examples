@@ -1,7 +1,6 @@
 <template>
   <div>
     <BaseFooLink></BaseFooLink>
-    <h6>API接口（服务端处理server）的示例。</h6>
     <div>api请求URL：{{url}}</div>
     <div v-if="resData">
       <div>api请求成功数据：</div>

@@ -8,3 +8,8 @@ export const useUser = () => {
     return {name:"Mike",age:useTimes()};
   });
 }
+export const usePageTKD = () => {
+  return useState('pageTKD', () => {
+    return {};
+  });
+}
