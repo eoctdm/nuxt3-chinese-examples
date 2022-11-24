@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /developer/
+
+Sitemap: https://www.dvtop.cn/resource/site/sitemap.xml
+Sitemap: https://www.dvtop.cn/resource/site/sitemap.txt

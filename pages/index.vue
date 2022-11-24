@@ -15,10 +15,11 @@
       </NuxtLink>
       <span class="app-margin-left-s app-color-grey">{{item.description}}</span>
     </div>
-    <div v-if="false">
+    <div v-if="true">
       <div>https://www.dvtop.cn/nuxt/examples/3.0.0/</div>
       <div v-for="(item,index) in links" :key="index">
-        https://www.dvtop.cn/nuxt/examples/3.0.0{{item.url.replaceAll('${baseURL}',baseURL)}}
+        <div v-if="item.url.toLowerCase().indexOf('http')==0">{{item.url}}</div>
+        <div v-else>https://www.dvtop.cn/nuxt/examples/3.0.0{{item.url.replaceAll('${baseURL}',baseURL)}}</div>
       </div>
     </div>
   </div>
