@@ -15,7 +15,7 @@
       </NuxtLink>
       <span class="app-margin-left-s app-color-grey">{{item.description}}</span>
     </div>
-    <div v-if="true">
+    <div v-if="false">
       <div>https://www.dvtop.cn/nuxt/examples/3.0.0/</div>
       <div v-for="(item,index) in links" :key="index">
         <div v-if="item.url.toLowerCase().indexOf('http')==0">{{item.url}}</div>
