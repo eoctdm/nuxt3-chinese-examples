@@ -8,6 +8,6 @@
 </template>
 <script setup>
   definePageMeta({
-    middleware: "logging",  //可支持Array
+    middleware: "logging",   
   })
 </script>

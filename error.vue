@@ -15,7 +15,7 @@
     error: Object
   });
   const home = ()=>{
-    //必须要在清除异常后再跳转到首页
+  
     clearError({ redirect: '/' });
   }
   const pageTKD = {

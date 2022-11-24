@@ -9,7 +9,7 @@
 </template>
 <script setup>
 definePageMeta({
-  //pageTransition: false, //关闭页面过渡动画
+
   pageTransition: {
     name: 'rotate'
   }

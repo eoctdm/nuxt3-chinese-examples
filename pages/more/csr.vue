@@ -12,7 +12,7 @@
 <script setup>
   const csrData = ref();
   if( process.client){
-    //此处代码仅在客户端渲染时执行，因此html中无此数据
+  
     csrData.value = "123 客户端渲染后数据内容";
   }
   const tap = ()=>{

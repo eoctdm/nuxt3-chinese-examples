@@ -12,7 +12,7 @@
   </div>
 </template>
 <script setup>
-  //title在此页面路由的组件或布局中通过route.meta.t1方式获取对应值。
+
   const head = {
     title: 'SEO配置之路由元数据使用',
     keywords: '索引擎优化,SEO,路由元数据',

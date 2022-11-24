@@ -32,24 +32,30 @@
         <pre>{{JSON.stringify(errorData,null,2)}}</pre>
       </div>
     </div>
+    <div @click="getAll" class="app-color-blue app-cursor">
+      同时请求两个API数据
+    </div>
+    <div class="app-box" v-if="allData">
+      <pre>{{JSON.stringify(allData,null,2)}}</pre>
+    </div>
   </div>
 </template>
 <script setup>
-  //本示例访问Nuxt3的server下api，因此不需要指定baseURL
+
   const menuUrl = ref("");
   const resultUrl = ref("");
   const menuData = ref();
   const resultData = ref();
   const errorData = ref();
   const pageIndex = ref(1);
-  //初始化加载列表数据，服务端渲染
+
   menuUrl.value = '/api/examples/list?page='+pageIndex.value;
   const { data: resDataMenu,refresh,error: resErrorMenu} = await useFetch(
-    //刷新时每次动态构建URL，必须使用()=>动态生成
+  
     ()=>`/api/examples/list?page=${pageIndex.value}`, {method: 'GET'});
   menuData.value = resDataMenu.value;
   errorData.value = resErrorMenu.value;
-  //通过refresh获取列表，先必须deep watch
+
   watch(resDataMenu, () => {
     menuData.value = resDataMenu.value;
     errorData.value = resErrorMenu.value;
@@ -60,16 +66,28 @@
     pageIndex.value += pageOffset;
     refresh();
   }
-  //获取详细，客户端渲染
+
   const getData = async (issueId)=>{
     resultData.value = null;
     errorData.value = null;
     resultUrl.value = `/api/examples/info?id=${issueId}`;
-    const uniqueKey = "vk_"+issueId; //保证不同的请求KEY不同，以请求到数据
+    const uniqueKey = "vk_"+issueId;   
     const { data: resData,error:  resError} = await useFetch(
       resultUrl.value, {
       key: uniqueKey,method: 'GET'});
     resultData.value = resData.value;
     errorData.value = resError.value;
   }
+
+  const allData = ref();
+  const getAll = async ()=>{
+    const [{ data: firstData }, { data: secondData }] = await Promise.all([
+      useFetch(`/api/examples/list?page=3`),
+      useFetch(`/api/examples/info?id=2815`)
+    ]);
+    allData.value = {
+      firstData: firstData.value,
+      secondData: secondData.value
+    };
+  };
 </script>

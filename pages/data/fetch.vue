@@ -32,17 +32,23 @@
         <pre>{{JSON.stringify(errorData,null,2)}}</pre>
       </div>
     </div>
+    <div @click="proxyGet" class="app-color-blue app-cursor">
+      通过后台proxy请求第三方API的数据
+    </div>
+    <div class="app-box" v-if="proxyData">
+      <pre>{{JSON.stringify(proxyData,null,2)}}</pre>
+    </div>
   </div>
 </template>
 <script setup>
-  //本示例访问Nuxt3的server下api，因此不需要指定baseURL
+
   const menuUrl = ref("");
   const resultUrl = ref("");
   const menuData = ref();
   const resultData = ref();
   const errorData = ref();
   const pageIndex = ref(1);
-  //获取列表
+
   const getMenu = async (pageOffset)=>{
     errorData.value = null;
     pageIndex.value += pageOffset;
@@ -53,7 +59,7 @@
         });
     menuData.value = resData;
   }
-  //获取详细，客户端渲染
+
   const getData = async (issueId)=>{
     resultData.value = null;
     errorData.value = null;
@@ -65,6 +71,18 @@
       errorData.value = error.message;
     }
   }
-  //初始化加载数据，服务端渲染
+
+  const proxyData = ref();
+  const proxyGet = async ()=>{
+    try{
+      const testData = await $fetch(
+        "/proxy-api/nuxt/examples/3.0.0/server/china/hello/mike?type=web", 
+        {method: 'GET'});
+      proxyData.value = testData;
+    }catch(error){
+      proxyData.value = error;
+    }
+  }
+
   await getMenu(0);
 </script>

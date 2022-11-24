@@ -12,7 +12,7 @@
 <script setup>
   definePageMeta({
     validate: async (route) => {
-      //如果返回false会报404错误
+    
       return /^\d+$/.test(route.params.serial);
     }
   });

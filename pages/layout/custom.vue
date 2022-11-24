@@ -18,10 +18,10 @@
 <script setup>
   const tkdData = usePageTKD();
   definePageMeta({
-    layout: false, //页面初始化时禁用默认布局
-    //layout: "custom-first", //页面初始化时自定义更改布局
+    layout: false,   
+  
   });
-  //本示例通过标签的name来动态更改布局
+
   const layoutName = ref("custom-first");
   function tap(type) {
     if (type == 1) layoutName.value = 'default';

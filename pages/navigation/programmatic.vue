@@ -16,7 +16,7 @@
       }
     });
     */
-    /* 推荐方式 */
+    
     await navigateTo({
       path: '/route/all/china/gd/sz',
       query: {

@@ -11,8 +11,8 @@
   </div>
 </template>
 <script setup>
-  //动态引用开启全局注册所有组件后，注释掉resolveComponent
-  const BaseFooLink = resolveComponent('BaseFooLink'); //"BaseFooLink";
-  const TheFooter = resolveComponent('TheFooter'); //"TheFooter"
+
+  const BaseFooLink = resolveComponent('BaseFooLink');  
+  const TheFooter = resolveComponent('TheFooter');  
   const isLink = ref(true);
 </script>

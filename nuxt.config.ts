@@ -1,16 +1,16 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+
 import headConfig from "./assets/data/head.js"
-const baseURL = "/"; // /nuxt/examples/3.0.0/ #结尾必须加/
+const baseURL = "/";   
 export default defineNuxtConfig({
   routeRules: {
-    // '/**': { ssr: false }, //将所有路由ssr关闭，即整个网站为客户端渲染
-    // '/navigation/**': { ssr: false }, //匹配的路由为客户端渲染
-    // '/navigation/component': { ssr: false }, //匹配的页面为客户端渲染
+  
+  
+  
   },
   css: [
     '~/assets/css/app.scss',
-    //bootstrap V5.2.2引用scss后台终端会有错误提示，本处引用css；新版本可尝试
-    //'bootstrap/scss/bootstrap.scss',
+  
+  
     'bootstrap/dist/css/bootstrap.min.css',
     'bootstrap-icons/font/bootstrap-icons.scss',
     'ant-design-vue/dist/antd.css',
@@ -20,10 +20,10 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode'
   ],
   app: {
-    baseURL, //在头部定义
-    //pageTransition: false, //全局关闭页面过渡动画
+    baseURL, 
+  
     pageTransition: { name: 'page', mode: 'out-in' },
-    //layoutTransition: false, //全局关闭布局过渡动画
+  
     layoutTransition: { name: 'rotate', mode: 'out-in' },
     head: {
       charset: 'utf-16',
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
         */
       ],
       script: [
-        //放在script最前，为异步加载；?号后更换为您申请的KEY。
+      
         { src: 'https://hm.baidu.com/hm.js?f6f1fef5f3a52df081128b261a04438c' },
         /* 客户端引用bootstrap方式，不推荐；在script和link中，使用body: true配置将其添加到body里最后元素
         { body: true, src: 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js', integrity: 'sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3', crossorigin: 'anonymous' },
@@ -67,12 +67,12 @@ export default defineNuxtConfig({
   */
   imports: {
     dirs: [
-      'composables/**', //配置全子目录支持自动导入
+      'composables/**',  
     ]
   },
   vite: {
     css: {
-      //引入scss全局变量
+    
       preprocessorOptions: {
         scss: {
           additionalData: '@import "assets/css/variable.scss";',

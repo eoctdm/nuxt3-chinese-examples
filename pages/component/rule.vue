@@ -11,7 +11,7 @@
 <script setup>
 const show = ref(false);
 setTimeout(() => {
-  //Lazy组件两秒后才会真实加载，示范懒加载效果
+
   show.value = true;
 }, 2000);
 </script>

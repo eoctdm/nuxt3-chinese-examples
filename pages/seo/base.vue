@@ -12,7 +12,7 @@
 </template>
 <script setup>
 const tkdData = usePageTKD();
-  //通过useHead设置head元素
+
   const head = {
     title: tkdData.value.title,
     keywords: tkdData.value.keywords,
@@ -20,8 +20,8 @@ const tkdData = usePageTKD();
   };
   useHead({
     title: head.title,
-    //titleTemplate: head.title+'-%s',
-    //titleTemplate: (appTitle) => `${head.title}-${appTitle}`,
+  
+  
     meta: [
       { name: 'keywords', content: head.keywords },
       { name: 'description', content: head.description },

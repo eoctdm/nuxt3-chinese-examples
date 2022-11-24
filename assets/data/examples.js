@@ -1,4 +1,4 @@
-//测试api的数据；仅供个人实验使用，严禁传播或商用。
+
 const issues = [
   {id:2795,serial:2022001,date:"2022-01-02",red:"6,13,15,17,20,21",blue:"3"},
   {id:2796,serial:2022002,date:"2022-01-04",red:"2,12,21,23,25,31",blue:"8"},
@@ -28,7 +28,7 @@ const _parseInt = ( str)=>{
   }
   return 0;
 }
-//模拟数据库分页查询，返回列表；立即返回
+
 const find = (page,size=5)=>{
   page = _parseInt( page);
   size = _parseInt( size);
@@ -42,7 +42,7 @@ const find = (page,size=5)=>{
     }
   });
 }
-//模拟数据库查询，返回某项详情；timeout秒内返回数据
+
 const info = (id,timeout=0)=>{
   id = _parseInt( id);
   timeout = _parseInt( timeout);

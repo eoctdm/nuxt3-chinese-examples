@@ -28,7 +28,7 @@
   import pageLinks from "~/assets/data/pages"
   const config = useRuntimeConfig();
   const baseURL = config.app.baseURL;
-  //得到搜索内容
+
   const searchKey = ref();
   const links = computed(()=>{
     if( !searchKey.value) return pageLinks;

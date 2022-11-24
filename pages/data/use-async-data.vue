@@ -36,36 +36,36 @@
   </div>
 </template>
 <script setup>
-  //本示例访问Nuxt3的server下api，因此不需要指定baseURL
+
   const menuUrl = ref("");
   const resultUrl = ref("");
   const menuData = ref();
-  const resultLoading = ref(false); //详细数据获取进度
+  const resultLoading = ref(false);  
   const resultData = ref();
   const errorData = ref();
   const pageIndex = ref(1);
-  //获取列表
+
   const getMenu = async (pageOffset)=>{
     errorData.value = null;
     menuUrl.value = '/api/examples/list?page='+pageIndex.value;
     pageIndex.value += pageOffset;
-    const uniqueKey = "vk_"+pageIndex.value; //保证不同的请求KEY不同，以请求到数据
+    const uniqueKey = "vk_"+pageIndex.value;  
     const { data: resData,error:  resError} = await useAsyncData( uniqueKey,
       ()=>$fetch(menuUrl.value, {method: 'GET'}));
     menuData.value = resData.value;
     errorData.value = resError.value;
   }
-  //获取详细，客户端渲染
+
   const getData = async (issueId)=>{
     resultData.value = null;
     errorData.value = null;
     resultUrl.value = `/api/examples/info?id=${issueId}&timeout=1000`;
-    const uniqueKey = "vk_"+issueId; //保证不同的请求KEY不同，以请求到数据
+    const uniqueKey = "vk_"+issueId;  
     const { pending, data: resData, error:  resError} = useAsyncData( uniqueKey,
         ()=>$fetch(resultUrl.value, {method: 'GET'}),{
-        lazy: true, //异常请求，等同useLazyAsyncData，不要使用awiat
+        lazy: true,  
       });
-    //通过pending显示数据加载进度
+  
     resultLoading.value = pending.value;
     watch(pending, () => {
       resultLoading.value = pending.value;
@@ -73,6 +73,6 @@
       errorData.value = resError.value;
     });
   }
-  //初始化加载数据，服务端渲染
+
   await getMenu(0);
 </script>

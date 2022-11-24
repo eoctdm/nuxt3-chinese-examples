@@ -19,10 +19,10 @@
   const fontSize = useState("fontSizeCustom",()=>20);
   const tap = ( size)=>{
     fontSize.value += size;
-    //设置全局样式的值
+  
     document.documentElement.style.setProperty(varKey,fontSize.value+"px");
   }
-  //仅在客户端渲染时设置
+
   process.client && tap(0);
 </script>
 <style lang="scss" scoped>

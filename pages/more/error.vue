@@ -44,8 +44,8 @@
     errorData.value = error.message;
   }
   const clearError = async(error)=>{
-    //可以尝试解决异常或跳转到指定页显示异常
-    //注意：在之前清除错误，会陷入循环。必须放在最后
+  
+  
     error.value = null;
   }
 </script>

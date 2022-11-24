@@ -27,9 +27,9 @@
     tipList.forEach(e => new bootstrap.Tooltip(e));
   }
   onMounted(()=>{
-    //如果开启pageTransition或layoutTransition，需要setTimeout在过渡时间后执行才行
+  
     setTimeout(() => {
-      //以下方法只允许在客服端上渲染
+    
       process.client && doTooltip();
     }, 500);
   });

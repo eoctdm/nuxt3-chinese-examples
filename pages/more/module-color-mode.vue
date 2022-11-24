@@ -18,12 +18,12 @@
 </template>
 <script setup>
   definePageMeta({
-    //colorMode: 'dark', //强制此页面的主题，动态设置无效
+  
   })
   const colorMode = useColorMode()
 </script>
 <style lang="scss">
-/* 主题是全局，此style不能使用scoped，否则无权限设置全局body等样式 */
+
 body, select, h6 {
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.8);

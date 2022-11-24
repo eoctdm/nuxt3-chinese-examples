@@ -1,4 +1,4 @@
-//全局捕捉异常
+
 export default defineNuxtPlugin((nuxtApp) => {
   const side = process.client ? "客户" : (process.server ? "服务" : "未知");
   nuxtApp.hook('vue:error', (...args) => {
